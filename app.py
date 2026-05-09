@@ -2,15 +2,15 @@ import streamlit as st
 import os
 from openai import OpenAI
 
-st.set_page_config(page_title="GenAI App", layout="centered")
+st.set_page_config(page_title="GenAI App", layout="centered") 
 
 st.title("GenAI Assistant 🚀")
 
 # Load API Key
-api_key = os.getenv("OPENAI_API_KEY")
+api_key = os.getenv("OPENAI_API_KEY") 
 
 if not api_key:
-    st.error("❌ OPENAI_API_KEY is not set. Please configure environment variable.")
+    st.error("❌ OPENAI_API_KEY is not set. Please configure environment variable.") 
     st.stop()
 
 # Cache OpenAI client (important for performance)
@@ -21,7 +21,7 @@ def get_client():
 client = get_client()
 
 # Input box
-query = st.text_input("Ask anything:")
+query = st.text_input("Ask anything:") 
 
 if query and query.strip():
     try:
